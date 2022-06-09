@@ -1,12 +1,10 @@
 import sys
 import os
-import pyttsx3
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from gtts import gTTS
 import pdfplumber
-from pyttsx3 import *
 
 
 class DlgMain(QDialog):
@@ -47,7 +45,6 @@ class DlgMain(QDialog):
                                             f' There are {len(text)} symbols')
                  self.success_label.setGeometry(100, 140, 155, 40)
                  self.play_btn.setDisabled(False)
-                 self.stop_btn.setDisabled(False)
              else:
                  self.success_label.setText('There is no text in PDF!')
              return self.text
